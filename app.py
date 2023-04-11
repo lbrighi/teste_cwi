@@ -1,6 +1,6 @@
 from flask import Flask, request
 from services.contracts_service import Contracts, Contract
-
+from services.orders_service import Orders
 app = Flask(__name__)
 
 
@@ -16,3 +16,12 @@ def contract():
         request.json['renegotiated'],
         request.json['top_n']
     )
+
+@app.route("/orders", methods=['POST'])
+def orders():
+    orders = Orders()
+    response = orders.combine_orders(
+        request.json['amount_values'],
+        request.json['n_max']
+    )
+    return f'O número de viagens será: {response}'
