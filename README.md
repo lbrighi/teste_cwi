@@ -39,7 +39,7 @@ http://localhost:5000/
 
 ## 🛠 Endpoints disponíveis
 Duas rotas estão disponíveis
-1. Contracts *POST*
+1. Contracts - *POST*
 ``` bash
 http://localhost:5000/contracts
 ```
@@ -66,7 +66,7 @@ O retorno será uma lista contendo o id e o valor dos contratos:
     "id=1, debt=40"
 ]
 ```
-2. Orders -*POST*
+2. Orders - *POST*
 ``` bash
 http://localhost:5000/orders
 ```
