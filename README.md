@@ -56,11 +56,9 @@ Este endpoint recebe informações dos contratos e retorna de forma ordenada por
     "top_n": 3
 }
 ```
-**contracts** é uma lista de objetos, contendo o id do contrato e valor (debt).
-&nbsp;**renegotiated** é uma lista de ids que já estão em negociação
-&nbsp;**top_n** é um inteiro que representa o número de contratos a serem retornados
+**contracts** é uma lista de objetos, contendo o id do contrato e valor (debt), **renegotiated** é uma lista de ids que já estão em negociação, **top_n** é um inteiro que representa o número de contratos a serem retornados.
 
-o retorno será uma lista contendo o id e o valor dos contratos
+O retorno será uma lista contendo o id e o valor dos contratos:
 ``` bash
 [
     "id=5, debt=100",
@@ -80,10 +78,9 @@ Este endpoint recebe os valores a serem enviados às agências, agrupando em par
     "n_max": 80
 }
 ```
-amount_values é uma lista inteiros, os valores
-&nbsp;n_max é um inteiro que representa o valor máximo em cada viagem
+**amount_values** é a lista dos valores a serem levados às agências, **n_max** é um inteiro que representa o valor máximo em cada viagem.
 
-o retorno trará o número de viagens necessárias
+O retorno trará o número de viagens necessárias:
 ``` bash
 O número de viagens será: 2
 ```
