@@ -4,13 +4,13 @@
 - [📖 Sobre](#-sobre)
 - [🛠 Tecnologias usadas](#-tecnologias-usadas)
 - [⚙ Como executar este projeto](#-como-executar-este-projeto)
-- [🛠 Endpoints disponíveis](#-ndpoints-disponíveis)
+- [🛠 Endpoints disponíveis](#-endpoints-disponíveis)
 
 ## 📖 Sobre
 Este projeto é um teste técnico backend.
 
 ## 🛠 Tecnologias usadas
-Para o desenvolvimento deste projeto, as seguintes tecnologias foram usadas:
+Para o desenvolvimento deste projeto as seguintes tecnologias foram usadas:
 
 - python
 - Flask
@@ -32,7 +32,7 @@ $ pip install -r requirements.txt
 $ flask --app app run
 ```
 
-a aplicação estará rodando na rota:
+A aplicação estará rodando na rota:
 ``` bash
 http://localhost:5000/
 ```
@@ -43,8 +43,7 @@ Duas rotas estão disponíveis
 POST
 http://localhost:5000/contracts
 ```
-Este endpoint recebe informações dos contratos e retorna de forma ordenada por valor os contratos disponpiveis para negociação
-o payload a ser enviado é:
+Este endpoint recebe informações dos contratos e retorna de forma ordenada por valor os contratos disponpiveis para negociação. O payload a ser enviado é:
 ``` bash
 {
     "contracts": [
@@ -57,9 +56,9 @@ o payload a ser enviado é:
     "top_n": 3
 }
 ```
-contracts é uma lista de objetos, contendo o id do contrato e valor (debt)
-renegotiated é uma lista de ids que já estão em negociação
-top_n é um inteiro que representa o número de contratos a serem retornados
+**contracts** é uma lista de objetos, contendo o id do contrato e valor (debt).
+&nbsp;**renegotiated** é uma lista de ids que já estão em negociação
+&nbsp;**top_n** é um inteiro que representa o número de contratos a serem retornados
 
 o retorno será uma lista contendo o id e o valor dos contratos
 ``` bash
@@ -74,8 +73,7 @@ o retorno será uma lista contendo o id e o valor dos contratos
 POST
 http://localhost:5000/orders
 ```
-Este endpoint recebe os valores a serem enviados às agências, agrupando em pares e limitando o valor máximo transportado
-O payload a ser enviado é:
+Este endpoint recebe os valores a serem enviados às agências, agrupando em pares e limitando o valor máximo transportado. O payload a ser enviado é:
 ``` bash
 {
     "amount_values": [20, 80, 30],
@@ -83,7 +81,7 @@ O payload a ser enviado é:
 }
 ```
 amount_values é uma lista inteiros, os valores
-n_max é um inteiro que representa o valor máximo em cada viagem
+&nbsp;n_max é um inteiro que representa o valor máximo em cada viagem
 
 o retorno trará o número de viagens necessárias
 ``` bash
